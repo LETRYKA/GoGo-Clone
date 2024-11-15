@@ -47,7 +47,6 @@ i {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 3px;
 }
 
 .nav-border {
@@ -263,6 +262,7 @@ i {
     display: flex;
     width: 100%;
     justify-content: center;
+    overflow: hidden;
 }
 
 .highlight-container {
@@ -278,7 +278,7 @@ i {
 
 .news-l {
     width: 503px;
-    margin-left: 40px;
+    margin-left: 5%;
     cursor: pointer;
 }
 
@@ -440,6 +440,18 @@ i {
     align-items: center;
     transition: all 0.3s ease-in-out;
     cursor: pointer;
+}
+
+#btm-gradient {
+    display: flex;
+    width: 171px;
+    height: 235px;
+    border-radius: 10px;
+    position: absolute;
+    z-index: 0;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 212, 255, 0) 41%);
+
 }
 
 .circle-logo {
@@ -673,6 +685,8 @@ i {
 .style-container {
     width: 264px;
     display: flex;
+    position: relative;
+    overflow: hidden;
 }
 
 .style-container .news-thumb {
@@ -721,24 +735,24 @@ footer {
     align-items: center;
 }
 
-.footer-container ul {
-    display: flex;
-    cursor: pointer;
-    gap: 25px;
-    flex-flow: row;
+#info {
+    display: block;
+    text-align: right;
+    justify-content: center;
+    width: 760px;
+    border: 1px solid red;
 }
 
-.footer-container li {
-    list-style: none;
-    display: flex;
-    text-align: center;
+#info a {
     font-size: 15px;
     font-weight: 500;
     color: black;
+    cursor: pointer;
     transition: all 0.3s ease-in-out;
+    margin: 30px 20px 0 0;
 }
 
-.footer-container li:hover {
+#info a:hover {
     color: #00ACEE;
 }
 
@@ -759,4 +773,213 @@ footer {
 
 .socials svg:hover {
     fill: black;
+}
+
+/* Ipad Responsive */
+
+
+@media only screen and (max-width: 960px) {
+
+    #logo {
+        width: 70px !important;
+        margin: 0 30px 0 0 !important;
+    }
+
+    #search {
+        display: none;
+    }
+
+    .nav-left ul {
+        display: none;
+    }
+
+    .nav-border {
+        padding: 0 30px 0 20px;
+    }
+
+    .nav-widget {
+        border: 1px solid #EFEFEF;
+        border-radius: 5px;
+        padding: 5px 5px 5px 5px;
+        height: 30px;
+        margin: 0 5px 0 0 !important;
+    }
+
+    .widget-info img {
+        width: 15px;
+    }
+
+    .widget-info span {
+        font-size: 14px !important;
+    }
+
+    .widget-title {
+        font-size: 10px !important;
+    }
+
+    .nav-border {
+        justify-content: start;
+    }
+
+    /* Highlight news */
+
+    .highlight-container {
+        max-width: 950px;
+        min-width: 400px;
+        margin: 0 30px 0 30px;
+    }
+
+    .category {
+        font-size: 10px !important;
+        padding: 5px 10px;
+    }
+
+    .news-l h1 {
+        font-size: 18px !important;
+        margin-right: 20px;
+    }
+
+    .news-l p {
+        width: auto;
+        margin-right: 20px;
+        height: 60px;
+        overflow: hidden;
+    }
+
+    /* Row News */
+
+    .news-row {
+        display: none;
+    }
+
+    /* GoGo Story */
+
+    .story {
+        position: relative;
+        height: 235px;
+        width: 100%;
+    }
+
+    #btm-gradient {
+        width: 100% !important;
+    }
+
+    .gogo-story {
+        margin: 0 30px 0 30px;
+    }
+
+    .story-container {
+        overflow: hidden;
+        margin: 0 30px 0 30px;
+    }
+
+    #story4 {
+        display: none;
+    }
+
+    #story5 {
+        display: none;
+    }
+
+    #story6 {
+        display: none;
+    }
+
+
+    /* Column news */
+
+    .column-news {
+        margin: 0 30px 0 30px;
+        max-width: 950px;
+        min-width: 400px;
+    }
+
+    .column-news-container .news-thumb {
+        background-size: cover !important;
+    }
+
+    .column-left {
+        max-width: 950px;
+        min-width: 100px;
+        height: auto;
+    }
+
+    .right-container {
+        display: none;
+    }
+
+    #vertical-line {
+        display: none;
+    }
+
+    #news-width {
+        width: 650px !important;
+    }
+
+    .more-btn {
+        width: 100% !important;
+        min-width: auto !important;
+    }
+
+    /* Interview */
+
+    .interview {
+        margin: 30px 30px 0 30px !important;
+        width: 100%;
+        height: auto;
+    }
+
+    #int1 {
+        display: none;
+    }
+
+    #int-right {
+        width: 100%;
+        align-items: center;
+    }
+
+    /* STYLE */
+
+    #style-wrapper {
+        width: 90%;
+    }
+
+    .style-container {
+        width: auto !important;
+    }
+
+    .style-container .news-thumb {
+        width: auto !important;
+        height: 170px !important;
+    }
+
+    #style4 {
+        display: none;
+    }
+
+    #tech4 {
+        display: none;
+    }
+
+    /* Footer */
+
+    footer {
+        overflow: hidden;
+    }
+
+    .footer-container {
+        border: 1px solid blue;
+        width: 90%;
+        margin: 0 30px 0 30px;
+    }
+
+    .footer-container ul {
+        width: 100%;
+        height: auto;
+        border: 1px solid red;
+    }
+
+    #logo-footer {
+        width: 120px;
+    }
 }

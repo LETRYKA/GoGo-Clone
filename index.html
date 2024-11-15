@@ -17,7 +17,7 @@
     <nav class="nav-global">
         <div class="nav-border">
             <div class="nav-left">
-                <img style="margin: 15px 0 0 0;" src="styles/imgs/logo.png" width="119px">
+                <img id="logo" style="margin: 15px 0 0 0;" src="styles/imgs/logo.png" width="119px">
                 <ul>
                     <li id="news">Мэдээ<i class="fa-solid fa-chevron-down"></i>
                         <div class="news-content">
@@ -126,11 +126,12 @@
                     </li>
                     <li id="eng">English</li>
                 </ul>
-                <img style="margin-left: 30px;" width="20px" src="styles//imgs//search2.svg" alt="">
+                <img style="margin-left: 30px;" width="20px" src="styles//imgs//search2.svg" alt="" id="search">
             </div>
             <div class="nav-right">
                 <div style="margin-right: 30px;" class="nav-widget">
-                    <div style="font-size: 12px; font-weight: 400; display: flex; justify-content: center;">Цаг агаар
+                    <div class="widget-title"
+                        style="font-size: 12px; font-weight: 400; display: flex; justify-content: center;">Цаг агаар
                     </div>
                     <div id="weather" class="widget-info">
                         <img width="20px" src="styles//imgs//weather.svg" alt="">
@@ -139,14 +140,16 @@
                     </div>
                 </div>
                 <div style="margin-right: 30px;" class="nav-widget">
-                    <div style="font-size: 12px; font-weight: 400; display: flex; justify-content: center;">Зурхай</div>
+                    <div class="widget-title"
+                        style="font-size: 12px; font-weight: 400; display: flex; justify-content: center;">Зурхай</div>
                     <div class="widget-info">
                         <img width="20px" src="styles//imgs//horoscope.svg" alt="">
                         <span style="font-size: 18px; font-weight: 500;">11.08</span>
                     </div>
                 </div>
                 <div class="nav-widget">
-                    <div style="font-size: 12px; font-weight: 400; display: flex; justify-content: center;">Валютын ханш
+                    <div class="widget-title"
+                        style="font-size: 12px; font-weight: 400; display: flex; justify-content: center;">Валютын ханш
                     </div>
                     <div style="gap: 5px;" class="widget-info">
                         <span style="font-size: 18px; font-weight: 500; color: #2adb00;">$</span>
@@ -270,10 +273,8 @@
     </div>
     <div class="wrapper">
         <div class="story-container">
-            <div style="background-image: url(styles//imgs/s1.jpg);" class="story">
-                <div
-                    style="display: flex; width: 171px; height: 235px; border-radius: 10px; position: absolute; z-index: 0; background: rgb(0,0,0); background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,212,255,0) 41%);">
-                </div>
+            <div style="background-image: url(styles//imgs/s1.jpg);" class="story" id="story1">
+                <div id="btm-gradient"></div>
                 <div class="circle-logo">
                     <img style="width: 30px;" src="styles/imgs//circle-gogo.svg" alt="">
                 </div>
@@ -286,10 +287,8 @@
                 </div>
             </div>
 
-            <div style="background-image: url(styles//imgs/s2.jpg);" class="story">
-                <div
-                    style="display: flex; width: 171px; height: 235px; border-radius: 10px; position: absolute; z-index: 0; background: rgb(0,0,0); background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,212,255,0) 41%);">
-                </div>
+            <div style="background-image: url(styles//imgs/s2.jpg);" class="story" id="story2">
+                <div id="btm-gradient"></div>
                 <div class="circle-logo">
                     <img style="width: 30px;" src="styles/imgs//circle-gogo.svg" alt="">
                 </div>
@@ -302,10 +301,8 @@
                 </div>
             </div>
 
-            <div style="background-image: url(styles//imgs/s3.avif);" class="story">
-                <div
-                    style="display: flex; width: 171px; height: 235px; border-radius: 10px; position: absolute; z-index: 0; background: rgb(0,0,0); background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,212,255,0) 41%);">
-                </div>
+            <div style="background-image: url(styles//imgs/s3.avif);" class="story" id="story3">
+                <div id="btm-gradient"></div>
                 <div class="circle-logo">
                     <img style="width: 30px;" src="styles/imgs//circle-gogo.svg" alt="">
                 </div>
@@ -319,10 +316,8 @@
                 </div>
             </div>
 
-            <div style="background-image: url(styles//imgs/s4.jpg);" class="story">
-                <div
-                    style="display: flex; width: 171px; height: 235px; border-radius: 10px; position: absolute; z-index: 0; background: rgb(0,0,0); background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,212,255,0) 41%);">
-                </div>
+            <div style="background-image: url(styles//imgs/s4.jpg);" class="story" id="story4">
+                <div id="btm-gradient"></div>
                 <div class="circle-logo">
                     <img style="width: 30px;" src="styles/imgs//circle-gogo.svg" alt="">
                 </div>
@@ -338,10 +333,8 @@
                 </div>
             </div>
 
-            <div style="background-image: url(styles//imgs/s5.jpg);" class="story">
-                <div
-                    style="display: flex; width: 171px; height: 235px; border-radius: 10px; position: absolute; z-index: 0; background: rgb(0,0,0); background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,212,255,0) 41%);">
-                </div>
+            <div style="background-image: url(styles//imgs/s5.jpg);" class="story" id="story5">
+                <div id="btm-gradient"></div>
                 <div class="circle-logo">
                     <img style="width: 30px;" src="styles/imgs//circle-gogo.svg" alt="">
                 </div>
@@ -357,10 +350,8 @@
             </div>
 
 
-            <div style="background-image: url(styles//imgs/s6.jpg);" class="story">
-                <div
-                    style="display: flex; width: 171px; height: 235px; border-radius: 10px; position: absolute; z-index: 0; background: rgb(0,0,0); background: linear-gradient(0deg, rgba(0,0,0,0.7) 0%, rgba(0,212,255,0) 41%);">
-                </div>
+            <div style="background-image: url(styles//imgs/s6.jpg);" class="story" id="story6">
+                <div id="btm-gradient"></div>
                 <div class="circle-logo">
                     <img style="width: 30px;" src="styles/imgs//circle-gogo.svg" alt="">
                 </div>
@@ -427,7 +418,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin-left: 20px; width: 450px;">
+                    <div id="news-width" style="margin-left: 20px; width: 450px;">
                         <h1 style="font-size: 19px; line-height: 26px;">“Ганц биечүүдийн өдөр”-ийн хямдрал
                             БНХАУ-ын жижиглэн худалдааг сэргээх төлөвтэй</h1>
                         <p style="font-size: 14px; color: #888; overflow: hidden; height: 35px;">БНХАУ-ын Сар шинийн
@@ -455,7 +446,7 @@
                             </div>
                         </div>
                     </div>
-                    <div style="margin-left: 20px; width: 450px;">
+                    <div id="news-width" style="margin-left: 20px; width: 450px;">
                         <h1 style="font-size: 19px; line-height: 26px;">Банш идэх гэсэн дугуйчид Хятадын хурдны замд
                             түгжрэл үүсгэв</h1>
                         <p style="font-size: 14px; color: #888; overflow: hidden; height: 35px;">Хятадын дөрвөн оюутан
@@ -472,7 +463,7 @@
                 <div class="more-btn"><span>Цааш үзэх</span><img style="height: 21px; width: 17px; margin-left: 8px;"
                         src="styles/imgs/msg-emoji.png" alt=""></div>
             </div>
-            <div style="border-left: 1px solid #EFEFEF; z-index: 2;"></div>
+            <div style="border-left: 1px solid #EFEFEF; z-index: 2;" id="vertical-line"></div>
 
             <div class="right-container">
                 <div class="column-right">
@@ -622,7 +613,8 @@
             </h1>
             <div style="gap: 15px; margin-top: 10px;" class="row">
                 <!---------INT HIGHLIGHT-------->
-                <div style="background-image: url(styles/imgs/i1.jpg); position: relative;" class="int-container a4">
+                <div style="background-image: url(styles/imgs/i1.jpg); position: relative;" class="int-container"
+                    id="int1">
                     <div class="btm-overlay">
                         <div style="margin:0 0 30px 40px;">
                             <div class="int-category">Гарааны бизнес</div>
@@ -641,7 +633,7 @@
                     </div>
                 </div>
 
-                <div class="column">
+                <div class="column" id="int-right">
                     <div style="gap: 15px;" class="row">
                         <!---------INT COLUMN 1------->
                         <div style="background-image: url(styles/imgs/i2.jpg); width: 264px; height: 243px; position: relative;"
@@ -722,10 +714,10 @@
     </div>
 
     <div class="wrapper">
-        <div style="margin-top: 10px; gap: 15px;" class="gogo-story">
+        <div style="margin-top: 10px; gap: 15px;" class="gogo-story" id="style-wrapper">
 
             <!---------STYLE NEWS 1------->
-            <div class="style-container column">
+            <div class="style-container column" id="style1">
                 <div style="background-image: url(styles/imgs/style1.jpg); width: 264px; height: 230px; "
                     class="news-thumb">
                     <div class="overlay">
@@ -752,7 +744,7 @@
             </div>
 
             <!---------STYLE NEWS 2------->
-            <div class="style-container column">
+            <div class="style-container column" id="style2">
                 <div style="background-image: url(styles/imgs/style2.jpg); width: 264px; height: 230px; "
                     class="news-thumb">
                     <div class="overlay">
@@ -779,7 +771,7 @@
             </div>
 
             <!---------STYLE NEWS 3------->
-            <div class="style-container column">
+            <div class="style-container column" id="style3">
                 <div style="background-image: url(styles/imgs/style3.jpg); width: 264px; height: 230px; "
                     class="news-thumb">
                     <div class="overlay">
@@ -806,7 +798,7 @@
             </div>
 
             <!---------STYLE NEWS 4------->
-            <div class="style-container column">
+            <div class="style-container column" id="style4">
                 <div style="background-image: url(styles/imgs/style4.jpg); width: 264px; height: 230px; "
                     class="news-thumb">
                     <div class="overlay">
@@ -848,10 +840,10 @@
     </div>
 
     <div class="wrapper">
-        <div style="margin-top: 10px; gap: 15px;" class="gogo-story">
+        <div style="margin-top: 10px; gap: 15px;" class="gogo-story" id="style-wrapper">
 
             <!---------STYLE NEWS 1------->
-            <div class="style-container column">
+            <div class="style-container column" id="tech1">
                 <div style="background-image: url(styles/imgs/tech1.jpg); width: 264px; height: 170px; "
                     class="news-thumb">
                     <div class="overlay">
@@ -878,7 +870,7 @@
             </div>
 
             <!---------STYLE NEWS 2------->
-            <div class="style-container column">
+            <div class="style-container column" id="tech2">
                 <div style="background-image: url(styles/imgs/tech2.jpg); width: 264px; height: 170px; "
                     class="news-thumb">
                     <div class="overlay">
@@ -905,7 +897,7 @@
             </div>
 
             <!---------STYLE NEWS 3------->
-            <div class="style-container column">
+            <div class="style-container column" id="tech3">
                 <div style="background-image: url(styles/imgs/tech3.jpg); width: 264px; height: 170px; "
                     class="news-thumb">
                     <div class="overlay">
@@ -932,7 +924,7 @@
             </div>
 
             <!---------STYLE NEWS 4------->
-            <div class="style-container column">
+            <div class="style-container column" id="tech4">
                 <div style="background-image: url(styles/imgs/tech4.jpg); width: 264px; height: 170px; "
                     class="news-thumb">
                     <div class="overlay">
@@ -1219,22 +1211,18 @@
 
 <footer class="column">
     <div class="footer-container">
-        <img width="120px" src="styles/imgs/logo.png" alt="">
-        <div style="display: flex; align-items: end; flex-flow: column;">
-            <ul>
-                <li><img style="margin-right: 10px; width: 15px; height: 20px;" src="styles/imgs/laptop-emoji.png"
-                        alt="">Бидний тухай</li>
-                <li><img style="margin-right: 10px; width: 15px; height: 20px;" src="styles/imgs/pot-emoji.png"
-                        alt="">Сурталчилгаа байршуулах</li>
-                <li><img style="margin-right: 10px; width: 15px; height: 20px;" src="styles/imgs/deal-emoji.png"
-                        alt="">Редакцийн ёс зүй</li>
-                <li><img style="margin-right: 10px; width: 15px; height: 20px;" src="styles/imgs/lock-emoji.png"
-                        alt="">Нууцлалын бодлого</li>
-            </ul>
-            <ul style="margin-top: -5px;">
-                <li><img style="margin-right: 10px; width: 15px; height: 20px;" src="styles/imgs/phone-emoji.png"
-                        alt="">Холбоо барих</li>
-            </ul>
+        <img width="120px" src="styles/imgs/logo.png" alt="" id="logo-footer">
+        <div id="info">
+            <a><img style="margin-right: 10px; width: 15px; height: 20px;" src="styles/imgs/laptop-emoji.png"
+                    alt="">Бидний тухай</a>
+            <a><img style="margin-right: 10px; width: 15px; height: 20px;" src="styles/imgs/pot-emoji.png"
+                    alt="">Сурталчилгаа байршуулах</a>
+            <a><img style="margin-right: 10px; width: 15px; height: 20px;" src="styles/imgs/deal-emoji.png"
+                    alt="">Редакцийн ёс зүй</a>
+            <a><img style="margin-right: 10px; width: 15px; height: 20px;" src="styles/imgs/lock-emoji.png"
+                    alt="">Нууцлалын бодлого</a>
+            <a><img style="margin-right: 10px; width: 15px; height: 20px;" src="styles/imgs/phone-emoji.png"
+                    alt="">Холбоо барих</a>
         </div>
     </div>
     <div class="footer-container column">
