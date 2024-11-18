@@ -135,7 +135,7 @@
                     </div>
                     <div id="weather" class="widget-info">
                         <img width="20px" src="styles//imgs//weather.svg" alt="">
-                        <span style="font-size: 18px; font-weight: 500;">6</span>
+                        <span style="font-size: 18px; font-weight: 500;">-2</span>
                         <div class="weather-popup">Улаанбаатар хот</div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                         style="font-size: 12px; font-weight: 400; display: flex; justify-content: center;">Зурхай</div>
                     <div class="widget-info">
                         <img width="20px" src="styles//imgs//horoscope.svg" alt="">
-                        <span style="font-size: 18px; font-weight: 500;">11.08</span>
+                        <span style="font-size: 18px; font-weight: 500;">11.18</span>
                     </div>
                 </div>
                 <div class="nav-widget">
@@ -154,7 +154,7 @@
                     <div style="gap: 5px;" class="widget-info">
                         <span style="font-size: 18px; font-weight: 500; color: #2adb00;">$</span>
                         <span style="font-size: 18px; font-weight: 500; opacity: 0.1;">|</span>
-                        <span style="font-size: 18px; font-weight: 500;">3409₮</span>
+                        <span style="font-size: 18px; font-weight: 500;">3413₮</span>
                     </div>
                 </div>
             </div>
@@ -165,15 +165,14 @@
         <div class="highlight-container">
             <div class="news-l">
                 <button class="category">Дэлхийд</button>
-                <h1 style="font-size: 26px; font-weight: 700; margin-top: 20px; transition: all 0.2s ease-in-out;">ФОТО:
-                    2024 оны зэрлэг байгалийн ШИЛДЭГ ГЭРЭЛ ЗУРГУУД</h1>
+                <h1 style="font-size: 26px; font-weight: 700; margin-top: 20px; transition: all 0.2s ease-in-out;">
+                    Дональд Трамп: Бурхан миний амийг аварсан нь шалтгаантай байж</h1>
                 <p style="font-size: 13px; opacity: 0.4; margin-top: 20px; line-height: 20px;">117 улсаас илгээсэн
-                    59,228 бүтээлийн дундаас шалгарсан
-                    байгалийн болон зэрлэг амьтдын шилдэг гэрэл зургуудыг шалгаруулжээ. Канадын далайн хамгааллын гэрэл
-                    зурагчин Шэйн Гросс нь "Амьдралын сүрэг" хэмээх...</p>
+                    2024 оны АНУ-ын Ерөнхийлөгчийн сонгуулийн үр дүн гарлаа. Энэ сонгуульд Бүгд найрамдах намаас нэр
+                    дэвшигч Дональд Трамп ялалт байгуулсан нь тодорхой болов...</p>
                 <button style="margin-top: 30px;" class="share"><i
                         style="margin-right: 10px; font-size: 16px; color: #c6c6c6; transition: all 0.5s ease-in-out;"
-                        class="fas fa-share color-light-gray text-15"></i>24</button>
+                        class="fas fa-share color-light-gray text-15"></i>42</button>
             </div>
             <div class="img-r">
                 <div class="overlay">
@@ -281,7 +280,7 @@
                 <div class="story-title">
                     <p class="story-title">Хиймэл оюун ухаанаар бүтсэн модель сард 10,000 евро олдог</p>
                 </div>
-                <div style="width: 150px; margin-top: -10px; z-index: 5;">
+                <div style="width: 150px; margin-top: -10px; z-index: 5;" class="story-views">
                     <span style=" font-size: 12px; font-weight: 700; color: white;"><i style="margin: -30px 0 0 3px;"
                             class="fas fa-eye"></i> 556</span>
                 </div>
@@ -295,7 +294,7 @@
                 <div class="story-title">
                     <p class="story-title">Дональд Трамп дөрвөн жилийн дараа эргэн ирэхдээ юу амласан бэ?</p>
                 </div>
-                <div style="width: 150px; margin-top: -10px; z-index: 5;">
+                <div style="width: 150px; margin-top: -10px; z-index: 5;" class="story-views">
                     <span style=" font-size: 12px; font-weight: 700; color: white;"><i style="margin: -30px 0 0 3px;"
                             class="fas fa-eye"></i> 1904</span>
                 </div>
@@ -955,7 +954,8 @@
 
     <!---------WATCH------->
     <div style="margin-top: 50px;" class="wrapper">
-        <div style="background-color: #1A1A1A; width: 100%; height: 768px; position: absolute; z-index: -1;"></div>
+        <div style="background-color: #1A1A1A; width: 100%; height: 768px; position: absolute; z-index: -1;"
+            id="watch-bg"></div>
         <div style="margin-top: 50px;" class="gogo-story">
             <h1 style="display: flex; align-items: center; font-size: 20px; font-weight: 700; color: white;">
                 <img style="margin-right: 10px; width: 30px;" src="styles/imgs/watch.svg" alt="">Үзэх
@@ -965,120 +965,125 @@
     </div>
 
     <div class="wrapper">
-        <div style="margin-top: 10px; gap: 15px;" class="gogo-story">
+        <div style="margin-top: 10px; gap: 15px;" class="gogo-story" id="watch">
 
             <!---------STYLE NEWS 1------->
-            <div class="style-container column">
-                <div style="position: absolute; z-index: 3;"><img src="styles/imgs/video.svg" alt=""></div>
-                <div style="background-image: url(styles/imgs/watch1.jpg); width: 264px; height: 170px; "
-                    class="news-thumb">
-                    <div class="overlay">
-                        <span
-                            style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
-                            <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
-                        <div
-                            style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+            <div style="gap: 15px;" class="row">
+                <div class="style-container column">
+                    <div style="position: absolute; z-index: 3;"><img src="styles/imgs/video.svg" alt=""></div>
+                    <div style="background-image: url(styles/imgs/watch1.jpg); width: 264px; height: 170px; "
+                        class="news-thumb">
+                        <div class="overlay">
+                            <span
+                                style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
+                                <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
+                            <div
+                                style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background: none; border: none;" class="style-desc-container column">
+                        <h1
+                            style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
+                            ТРЭЙЛЕР: Энэ сард нээлтээ хийх Холливудын 5 кино
+                        </h1>
+                        <div style="width: 100%;">
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
+                                    style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
+                                    class="fas fa-share color-light-gray"></i>37</span>
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
+                                    style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: none; border: none;" class="style-desc-container column">
-                    <h1
-                        style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
-                        ТРЭЙЛЕР: Энэ сард нээлтээ хийх Холливудын 5 кино
-                    </h1>
-                    <div style="width: 100%;">
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
-                                style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
-                                class="fas fa-share color-light-gray"></i>37</span>
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
-                                style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
-                    </div>
-                </div>
-            </div>
 
-            <!---------STYLE NEWS 2------->
-            <div class="style-container column">
-                <div style="position: absolute; z-index: 3;"><img src="styles/imgs/live.svg" alt=""></div>
-                <div style="background-image: url(styles/imgs/watch2.jpeg); width: 264px; height: 170px; "
-                    class="news-thumb">
-                    <div class="overlay">
-                        <span
-                            style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
-                            <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
-                        <div
-                            style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+                <!---------STYLE NEWS 2------->
+                <div class="style-container column">
+                    <div style="position: absolute; z-index: 3;"><img src="styles/imgs/live.svg" alt=""></div>
+                    <div style="background-image: url(styles/imgs/watch2.jpeg); width: 264px; height: 170px; "
+                        class="news-thumb">
+                        <div class="overlay">
+                            <span
+                                style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
+                                <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
+                            <div
+                                style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background: none; border: none;" class="style-desc-container column">
+                        <h1
+                            style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
+                            18.3 ТЭРБУМ төгрөг бүхий соёлын эрхийн бичиг тараах Ч.Номин сайдын багцыг дэмжлээ
+                        </h1>
+                        <div style="width: 100%;">
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
+                                    style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
+                                    class="fas fa-share color-light-gray"></i>37</span>
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
+                                    style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: none; border: none;" class="style-desc-container column">
-                    <h1
-                        style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
-                        18.3 ТЭРБУМ төгрөг бүхий соёлын эрхийн бичиг тараах Ч.Номин сайдын багцыг дэмжлээ
-                    </h1>
-                    <div style="width: 100%;">
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
-                                style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
-                                class="fas fa-share color-light-gray"></i>37</span>
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
-                                style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
-                    </div>
-                </div>
+
             </div>
 
             <!---------STYLE NEWS 3------->
-            <div class="style-container column">
-                <div style="position: absolute; z-index: 3;"><img src="styles/imgs/video.svg" alt=""></div>
-                <div style="background-image: url(styles/imgs/watch3.jpg); width: 264px; height: 170px; "
-                    class="news-thumb">
-                    <div class="overlay">
-                        <span
-                            style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
-                            <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
-                        <div
-                            style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+            <div style="gap: 15px;" class="row">
+                <div class="style-container column">
+                    <div style="position: absolute; z-index: 3;"><img src="styles/imgs/video.svg" alt=""></div>
+                    <div style="background-image: url(styles/imgs/watch3.jpg); width: 264px; height: 170px; "
+                        class="news-thumb">
+                        <div class="overlay">
+                            <span
+                                style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
+                                <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
+                            <div
+                                style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background: none; border: none;" class="style-desc-container column color: #c6c6c6">
+                        <h1
+                            style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
+                            Хөдөө аж ахуй, аж үйлдвэрийн салбарын стратегийн түншлэлийг хэлэлцэнэ
+                        </h1>
+                        <div style="width: 100%;">
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
+                                    style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
+                                    class="fas fa-share color-light-gray"></i>37</span>
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
+                                    style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: none; border: none;" class="style-desc-container column color: #c6c6c6">
-                    <h1
-                        style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
-                        Хөдөө аж ахуй, аж үйлдвэрийн салбарын стратегийн түншлэлийг хэлэлцэнэ
-                    </h1>
-                    <div style="width: 100%;">
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
-                                style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
-                                class="fas fa-share color-light-gray"></i>37</span>
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
-                                style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
-                    </div>
-                </div>
-            </div>
 
-            <!---------STYLE NEWS 4------->
-            <div class="style-container column">
-                <div style="position: absolute; z-index: 3;"><img src="styles/imgs/live.svg" alt=""></div>
-                <div style="background-image: url(styles/imgs/watch4.jpeg); width: 264px; height: 170px; "
-                    class="news-thumb">
-                    <div class="overlay">
-                        <span
-                            style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
-                            <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
-                        <div
-                            style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+                <!---------STYLE NEWS 4------->
+                <div class="style-container column">
+                    <div style="position: absolute; z-index: 3;"><img src="styles/imgs/live.svg" alt=""></div>
+                    <div style="background-image: url(styles/imgs/watch4.jpeg); width: 264px; height: 170px; "
+                        class="news-thumb">
+                        <div class="overlay">
+                            <span
+                                style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
+                                <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
+                            <div
+                                style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div style="background: none; border: none;" class="style-desc-container column">
-                    <h1
-                        style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
-                        УИХ-ын чуулганы хуралдаан 12:00 цаг хүртэл түр завсарлав
-                    </h1>
-                    <div style="width: 100%;">
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
-                                style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
-                                class="fas fa-share color-light-gray"></i>37</span>
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
-                                style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
+                    <div style="background: none; border: none;" class="style-desc-container column">
+                        <h1
+                            style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
+                            УИХ-ын чуулганы хуралдаан 12:00 цаг хүртэл түр завсарлав
+                        </h1>
+                        <div style="width: 100%;">
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
+                                    style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
+                                    class="fas fa-share color-light-gray"></i>37</span>
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
+                                    style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1088,120 +1093,124 @@
         </div>
     </div>
     <div class="wrapper">
-        <div style="margin-top: 10px; gap: 15px;" class="gogo-story">
+        <div style="margin-top: 10px; gap: 15px;" class="gogo-story" id="watch">
 
             <!---------STYLE NEWS 5------->
-            <div class="style-container column">
-                <div style="position: absolute; z-index: 3;"><img src="styles/imgs/photo.svg" alt=""></div>
-                <div style="background-image: url(styles/imgs/watch5.jpeg); width: 264px; height: 170px; "
-                    class="news-thumb">
-                    <div class="overlay">
-                        <span
-                            style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
-                            <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
-                        <div
-                            style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+            <div style="gap: 15px;" class="row">
+                <div class="style-container column">
+                    <div style="position: absolute; z-index: 3;"><img src="styles/imgs/photo.svg" alt=""></div>
+                    <div style="background-image: url(styles/imgs/watch5.jpeg); width: 264px; height: 170px; "
+                        class="news-thumb">
+                        <div class="overlay">
+                            <span
+                                style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
+                                <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
+                            <div
+                                style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background: none; border: none;" class="style-desc-container column">
+                        <h1
+                            style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
+                            Самар, аньс, үхрийн нүд, нэрсийг 15 мянган төгрөгөөр худалдаж байна
+                        </h1>
+                        <div style="width: 100%;">
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
+                                    style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
+                                    class="fas fa-share color-light-gray"></i>37</span>
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
+                                    style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: none; border: none;" class="style-desc-container column">
-                    <h1
-                        style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
-                        Самар, аньс, үхрийн нүд, нэрсийг 15 мянган төгрөгөөр худалдаж байна
-                    </h1>
-                    <div style="width: 100%;">
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
-                                style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
-                                class="fas fa-share color-light-gray"></i>37</span>
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
-                                style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
-                    </div>
-                </div>
-            </div>
 
-            <!---------STYLE NEWS 6------->
-            <div class="style-container column">
-                <div style="position: absolute; z-index: 3;"><img src="styles/imgs/photo.svg" alt=""></div>
-                <div style="background-image: url(styles/imgs/watch6.jpg); width: 264px; height: 170px; "
-                    class="news-thumb">
-                    <div class="overlay">
-                        <span
-                            style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
-                            <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
-                        <div
-                            style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+                <!---------STYLE NEWS 6------->
+                <div class="style-container column">
+                    <div style="position: absolute; z-index: 3;"><img src="styles/imgs/photo.svg" alt=""></div>
+                    <div style="background-image: url(styles/imgs/watch6.jpg); width: 264px; height: 170px; "
+                        class="news-thumb">
+                        <div class="overlay">
+                            <span
+                                style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
+                                <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
+                            <div
+                                style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div style="background: none; border: none;" class="style-desc-container column">
-                    <h1
-                        style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
-                        ФОТО: Алдагдахаас сэргийлсэн соёлын дурсгалт зүйлс бүхий “Аврагдсан өв” үзэсгэлэнгээс
-                    </h1>
-                    <div style="width: 100%;">
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
-                                style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
-                                class="fas fa-share color-light-gray"></i>37</span>
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
-                                style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
+                    <div style="background: none; border: none;" class="style-desc-container column">
+                        <h1
+                            style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
+                            ФОТО: Алдагдахаас сэргийлсэн соёлын дурсгалт зүйлс бүхий “Аврагдсан өв” үзэсгэлэнгээс
+                        </h1>
+                        <div style="width: 100%;">
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
+                                    style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
+                                    class="fas fa-share color-light-gray"></i>37</span>
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
+                                    style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <!---------STYLE NEWS 7------->
-            <div class="style-container column">
-                <div style="position: absolute; z-index: 3;"><img src="styles/imgs/photo.svg" alt=""></div>
-                <div style="background-image: url(styles/imgs/watch7.jpg); width: 264px; height: 170px; "
-                    class="news-thumb">
-                    <div class="overlay">
-                        <span
-                            style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
-                            <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
-                        <div
-                            style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+            <div style="gap: 15px;" class="row">
+                <div class="style-container column">
+                    <div style="position: absolute; z-index: 3;"><img src="styles/imgs/photo.svg" alt=""></div>
+                    <div style="background-image: url(styles/imgs/watch7.jpg); width: 264px; height: 170px; "
+                        class="news-thumb">
+                        <div class="overlay">
+                            <span
+                                style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
+                                <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
+                            <div
+                                style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background: none; border: none;" class="style-desc-container column">
+                        <h1
+                            style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
+                            ФОТО: 36 дахь удаагийн Номын баяр Сүхбаатарын талбайд эхэллээ
+                        </h1>
+                        <div style="width: 100%;">
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
+                                    style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
+                                    class="fas fa-share color-light-gray"></i>37</span>
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
+                                    style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
                         </div>
                     </div>
                 </div>
-                <div style="background: none; border: none;" class="style-desc-container column">
-                    <h1
-                        style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
-                        ФОТО: 36 дахь удаагийн Номын баяр Сүхбаатарын талбайд эхэллээ
-                    </h1>
-                    <div style="width: 100%;">
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
-                                style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
-                                class="fas fa-share color-light-gray"></i>37</span>
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
-                                style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
-                    </div>
-                </div>
-            </div>
 
-            <!---------STYLE NEWS 8------->
-            <div class="style-container column">
-                <div style="position: absolute; z-index: 3;"><img src="styles/imgs/photo.svg" alt=""></div>
-                <div style="background-image: url(styles/imgs/watch8.jpg); width: 264px; height: 170px; "
-                    class="news-thumb">
-                    <div class="overlay">
-                        <span
-                            style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
-                            <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
-                        <div
-                            style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+                <!---------STYLE NEWS 8------->
+                <div class="style-container column">
+                    <div style="position: absolute; z-index: 3;"><img src="styles/imgs/photo.svg" alt=""></div>
+                    <div style="background-image: url(styles/imgs/watch8.jpg); width: 264px; height: 170px; "
+                        class="news-thumb">
+                        <div class="overlay">
+                            <span
+                                style=" color:white; font-size: 16px; font-weight: 500; position: absolute; z-index: 999;">Унших
+                                <i style="margin-top: 4px;" class="fa-solid fa-arrow-right"></i></span>
+                            <div
+                                style="display: flex; background: black; width: 100%; height: 100%; border-radius: 10px; opacity: 0.4;">
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div style="background: none; border: none;" class="style-desc-container column">
-                    <h1
-                        style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
-                        ФОТО: БНХАУ-ын балетын театрын шилдэг бүжигчдийн БЭЛТГЭЛЭЭС
-                    </h1>
-                    <div style="width: 100%;">
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
-                                style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
-                                class="fas fa-share color-light-gray"></i>37</span>
-                        <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
-                                style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
+                    <div style="background: none; border: none;" class="style-desc-container column">
+                        <h1
+                            style="font-weight: 700; font-size: 14px; line-height: 1.3; margin: 20px 0 0 0; color: #c6c6c6;">
+                            ФОТО: БНХАУ-ын балетын театрын шилдэг бүжигчдийн БЭЛТГЭЛЭЭС
+                        </h1>
+                        <div style="width: 100%;">
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><i
+                                    style="color:#c6c6c6; font-size: 13px; margin:10px 5px 0 0"
+                                    class="fas fa-share color-light-gray"></i>37</span>
+                            <span style="font-size: 13px; color: #c6c6c6; position: relative;"><img
+                                    style="width: 13px; margin: 0 5px 0 15px;" src="styles//imgs/comment.svg">2</span>
+                        </div>
                     </div>
                 </div>
             </div>
