@@ -464,7 +464,7 @@ i {
 .story-title {
     margin-top: 20px;
     display: flex;
-    width: 150px;
+    width: 100%;
     height: 150px;
     justify-content: center;
     z-index: 5;
@@ -478,6 +478,11 @@ i {
     overflow: hidden;
     align-self: flex-end;
     transition: all 0.2s ease-in-out;
+    padding: 0 12px 0 12px;
+}
+
+.story-views span {
+    padding: 0 12px 0 12px;
 }
 
 .story:hover {
@@ -513,8 +518,8 @@ i {
 
 .trend-news {
     background: #FCFAF4;
-    width: 340px;
-    height: 630px;
+    width: 103%;
+    height: 615px;
     margin: 40px 0 0 -10px;
     z-index: 1;
     display: flex;
@@ -726,6 +731,7 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 .footer-container {
@@ -1067,18 +1073,14 @@ footer {
         display: none;
     }
 
+    .overlay span {
+        font-size: 10px !important;
+    }
+
     /* STORY */
 
     #story3 {
         display: none;
-    }
-
-    .story-title {
-        margin-left: -10px !important;
-    }
-
-    .story-views {
-        margin: 0 0 5px -25px;
     }
 
     /* NEWS */
@@ -1088,6 +1090,14 @@ footer {
     }
 
     .calendar-container {
+        display: none;
+    }
+
+    #news-width h1 {
+        font-size: 15px !important;
+    }
+
+    #news-width p {
         display: none;
     }
 
@@ -1149,7 +1159,7 @@ footer {
     }
 
     #logo-footer {
-        margin: 20px 0 30px 0;
+        margin: 50px 0 40px 0;
     }
 
     .socials {
@@ -1172,6 +1182,7 @@ footer {
         text-align: center !important;
         width: 100%;
         margin-bottom: -10px;
+        margin-left: -30px;
     }
 
 
